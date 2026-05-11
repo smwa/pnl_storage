@@ -14,8 +14,8 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = "precache-20240310172732+0000";
-const RUNTIME = "runtime-20240310172732+0000";
+const PRECACHE = "precache-20260511150744+0000";
+const RUNTIME = "runtime-20260511150744+0000";
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
@@ -295,6 +295,10 @@ const PRECACHE_URLS = [
   
     './lib/splide/js/splide.min.js.map',
   
+    './assets/img/logo.webp',
+  
+    './assets/img/themed-mask-icon.webp',
+  
     './assets/photos/interiors/273808929_109716964966492_1257565072509379129_n.webp',
   
     './assets/photos/interiors/277669033_130470846224437_4264867575808583705_n.webp',
@@ -307,182 +311,178 @@ const PRECACHE_URLS = [
   
     './assets/photos/metalBuildings/306794345_179504934641079_8535974952308255770_n.webp',
   
-    './assets/photos/metalBuildings/317319496_196066479651591_8033086363596913829_n.webp',
-  
-    './assets/photos/metalBuildings/IMG_3525.webp',
-  
-    './assets/photos/metalBuildings/IMG_4816.webp',
-  
-    './assets/photos/metalBuildings/360128884_297708939487344_7486151275152916537_n.webp',
-  
-    './assets/photos/metalBuildings/330773912_888035055680899_6729533302421398130_n.webp',
-  
-    './assets/photos/metalBuildings/IMG_4335.webp',
-  
-    './assets/photos/metalBuildings/IMG_2925.webp',
-  
     './assets/photos/metalBuildings/312231030_187397013851871_635093394470264618_n.webp',
-  
-    './assets/photos/metalBuildings/338722894_902938790993122_7620509298610421811_n.webp',
-  
-    './assets/photos/metalBuildings/IMG_4937.webp',
-  
-    './assets/photos/metalBuildings/IMG_3858.webp',
-  
-    './assets/photos/metalBuildings/IMG_1016.webp',
-  
-    './assets/photos/metalBuildings/IMG_4323.webp',
-  
-    './assets/photos/metalBuildings/IMG_4570.webp',
-  
-    './assets/photos/metalBuildings/IMG_3262.webp',
-  
-    './assets/photos/metalBuildings/IMG_4962.webp',
-  
-    './assets/photos/metalBuildings/IMG_4326.webp',
-  
-    './assets/photos/metalBuildings/IMG_2201.webp',
   
     './assets/photos/metalBuildings/312419075_187397997185106_8773415772926229329_n.webp',
   
+    './assets/photos/metalBuildings/317319496_196066479651591_8033086363596913829_n.webp',
+  
+    './assets/photos/metalBuildings/330773912_888035055680899_6729533302421398130_n.webp',
+  
+    './assets/photos/metalBuildings/338722894_902938790993122_7620509298610421811_n.webp',
+  
+    './assets/photos/metalBuildings/360128884_297708939487344_7486151275152916537_n.webp',
+  
+    './assets/photos/metalBuildings/IMG_1016.webp',
+  
+    './assets/photos/metalBuildings/IMG_2201.webp',
+  
+    './assets/photos/metalBuildings/IMG_2925.webp',
+  
     './assets/photos/metalBuildings/IMG_3260.webp',
   
-    './assets/photos/woodBuildingsExteriors/332500800_1858161564554510_1257490891665167562_n.webp',
+    './assets/photos/metalBuildings/IMG_3262.webp',
   
-    './assets/photos/woodBuildingsExteriors/296309277_164515082820013_3807612566924205564_n.webp',
+    './assets/photos/metalBuildings/IMG_3525.webp',
   
-    './assets/photos/woodBuildingsExteriors/312178328_187395530518686_5826124788769628328_n.webp',
+    './assets/photos/metalBuildings/IMG_3858.webp',
   
-    './assets/photos/woodBuildingsExteriors/315897295_194022423189330_4802535523674719575_n.webp',
+    './assets/photos/metalBuildings/IMG_4323.webp',
   
-    './assets/photos/woodBuildingsExteriors/317076551_196066506318255_7849869876898882511_n.webp',
+    './assets/photos/metalBuildings/IMG_4326.webp',
   
-    './assets/photos/woodBuildingsExteriors/317349703_196066442984928_7294981046766497828_n.webp',
+    './assets/photos/metalBuildings/IMG_4335.webp',
   
-    './assets/photos/woodBuildingsExteriors/317069212_196066669651572_3264464496037420631_n.webp',
+    './assets/photos/metalBuildings/IMG_4570.webp',
   
-    './assets/photos/woodBuildingsExteriors/317305361_196066526318253_8124637362063992771_n.webp',
+    './assets/photos/metalBuildings/IMG_4816.webp',
   
-    './assets/photos/woodBuildingsExteriors/317259337_196066656318240_6776040959092057245_n.webp',
+    './assets/photos/metalBuildings/IMG_4937.webp',
   
-    './assets/photos/woodBuildingsExteriors/307012730_179503731307866_5455523791698014710_n.webp',
+    './assets/photos/metalBuildings/IMG_4962.webp',
   
-    './assets/photos/woodBuildingsExteriors/317248327_196066412984931_1548440574333977193_n.webp',
+    './assets/photos/misc/277346936_128665343071654_3684056946120170643_n.webp',
   
-    './assets/photos/woodBuildingsExteriors/317390809_196066466318259_1505856712895319984_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316256468_194022343189338_6414962900318669852_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315394633_194022119856027_3669500207694322769_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316108159_194021809856058_4238063182667304887_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315443076_194022389856000_2593358726981860783_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315693101_194022503189322_6121017617906877547_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/307361119_179887764602796_6746691413869205369_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/343132800_249828797430035_2418222288186126761_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316059472_194022953189277_498638989776965615_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317352433_196066632984909_2720071073795498877_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315553179_194022643189308_210532773170104936_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317387231_196066642984908_5300496027241828950_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316148157_194022989855940_3780689501333514205_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317315562_196066486318257_1823387784181203141_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316085989_194021959856043_148918654592113424_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/312506116_187601597164746_5140390994332309915_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315464830_194022283189344_856498257118608311_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316047984_194023003189272_3354075957300133007_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315544123_194022449855994_8340016083664191396_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316007853_194021726522733_4708372897441210114_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315819346_194021776522728_1371115405545408446_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317258751_196066532984919_5000359204240112348_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317257530_196066396318266_2410997365364506849_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/312378978_187398577185048_4976433010011334822_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317256631_196066402984932_6008371050632593430_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/redCabin.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317346280_196066459651593_1239697562143216782_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/307099935_179716831286556_6501496958567859927_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317244531_196066449651594_5653166593472077644_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316089187_194023076522598_3681658895350288652_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315846877_194022556522650_4621601706608275566_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315963020_194022173189355_6592163033549930934_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315315027_194021929856046_6572346340184719963_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315436880_194022613189311_2800573190790370030_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316097645_194021829856056_1951294302220724822_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316104147_194022196522686_3625891179104415355_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315955778_194022039856035_4908468224910972019_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/317098197_196066556318250_401753936565286682_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315706441_194021859856053_3969430763201883945_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/315966824_194021869856052_1539917471058420946_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316815107_196066436318262_5728505603133179146_n.webp',
-  
-    './assets/photos/woodBuildingsExteriors/316047519_194023083189264_4751612418373410524_n.webp',
-  
-    './assets/photos/misc/315938373_194022226522683_1105717561318048404_n.webp',
+    './assets/photos/misc/277670370_129307439674111_6636102260424274141_n.webp',
   
     './assets/photos/misc/312978283_188336767091229_2527326504798738543_n.webp',
+  
+    './assets/photos/misc/315938373_194022226522683_1105717561318048404_n.webp',
   
     './assets/photos/misc/316060686_194021756522730_421869203808825585_n.webp',
   
     './assets/photos/misc/combined.webp',
   
-    './assets/photos/misc/277670370_129307439674111_6636102260424274141_n.webp',
+    './assets/photos/woodBuildingsExteriors/296309277_164515082820013_3807612566924205564_n.webp',
   
-    './assets/photos/misc/277346936_128665343071654_3684056946120170643_n.webp',
+    './assets/photos/woodBuildingsExteriors/307012730_179503731307866_5455523791698014710_n.webp',
   
-    './assets/img/themed-mask-icon.webp',
+    './assets/photos/woodBuildingsExteriors/307099935_179716831286556_6501496958567859927_n.webp',
   
-    './assets/img/logo.webp',
+    './assets/photos/woodBuildingsExteriors/307361119_179887764602796_6746691413869205369_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/312178328_187395530518686_5826124788769628328_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/312378978_187398577185048_4976433010011334822_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/312506116_187601597164746_5140390994332309915_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315315027_194021929856046_6572346340184719963_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315394633_194022119856027_3669500207694322769_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315436880_194022613189311_2800573190790370030_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315443076_194022389856000_2593358726981860783_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315464830_194022283189344_856498257118608311_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315544123_194022449855994_8340016083664191396_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315553179_194022643189308_210532773170104936_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315693101_194022503189322_6121017617906877547_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315706441_194021859856053_3969430763201883945_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315819346_194021776522728_1371115405545408446_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315846877_194022556522650_4621601706608275566_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315897295_194022423189330_4802535523674719575_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315955778_194022039856035_4908468224910972019_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315963020_194022173189355_6592163033549930934_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/315966824_194021869856052_1539917471058420946_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316007853_194021726522733_4708372897441210114_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316047519_194023083189264_4751612418373410524_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316047984_194023003189272_3354075957300133007_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316059472_194022953189277_498638989776965615_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316085989_194021959856043_148918654592113424_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316089187_194023076522598_3681658895350288652_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316097645_194021829856056_1951294302220724822_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316104147_194022196522686_3625891179104415355_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316108159_194021809856058_4238063182667304887_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316148157_194022989855940_3780689501333514205_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316256468_194022343189338_6414962900318669852_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/316815107_196066436318262_5728505603133179146_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317069212_196066669651572_3264464496037420631_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317076551_196066506318255_7849869876898882511_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317098197_196066556318250_401753936565286682_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317244531_196066449651594_5653166593472077644_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317248327_196066412984931_1548440574333977193_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317256631_196066402984932_6008371050632593430_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317257530_196066396318266_2410997365364506849_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317258751_196066532984919_5000359204240112348_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317259337_196066656318240_6776040959092057245_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317305361_196066526318253_8124637362063992771_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317315562_196066486318257_1823387784181203141_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317346280_196066459651593_1239697562143216782_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317349703_196066442984928_7294981046766497828_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317352433_196066632984909_2720071073795498877_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317387231_196066642984908_5300496027241828950_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/317390809_196066466318259_1505856712895319984_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/332500800_1858161564554510_1257490891665167562_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/343132800_249828797430035_2418222288186126761_n.webp',
+  
+    './assets/photos/woodBuildingsExteriors/redCabin.webp',
   
   
-    './build/metal/',
-  
-    './build/wood/',
-  
-    './build/',
-  
-    './slideshow/tinyhomes/',
-  
-    './slideshow/metal/',
+    './slideshow/more/',
   
     './slideshow/wood/',
   
-    './slideshow/more/',
+    './slideshow/metal/',
+  
+    './slideshow/tinyhomes/',
+  
+    './build/wood/',
+  
+    './build/metal/',
+  
+    './build/',
   
     './',
   
